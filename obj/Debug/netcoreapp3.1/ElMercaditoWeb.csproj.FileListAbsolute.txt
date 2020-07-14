@@ -187,3 +187,6 @@ C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\Edit.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\Index.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\ClientesProductos.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\CreateRole.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\EditRole.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ListRoles.cshtml.g.cs
