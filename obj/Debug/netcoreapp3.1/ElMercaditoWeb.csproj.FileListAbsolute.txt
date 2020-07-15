@@ -191,3 +191,4 @@ C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\EditRole.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ListRoles.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\ListUser.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\EditUsersInRole.cshtml.g.cs

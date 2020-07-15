@@ -20561,6 +20561,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Administrador\\EditUsersInRole.cshtml",
+      "TargetPath": "Views\\Administrador\\EditUsersInRole.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Categorias\\Delete.cshtml",
       "TargetPath": "Views\\Categorias\\Delete.cshtml",
       "FileKind": "mvc"
