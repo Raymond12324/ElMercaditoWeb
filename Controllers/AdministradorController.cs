@@ -36,6 +36,16 @@ namespace ElMercaditoWeb.Controllers
         }
 
 
+        public IActionResult Principal ()
+        {
+            return View();
+        }
+
+        public IActionResult MapaPedidos()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult CreateRole()
         {
