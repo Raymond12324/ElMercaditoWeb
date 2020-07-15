@@ -15,15 +15,19 @@
 
     foreach (var role in Model)
     {
-        <div class="card mb-3">
-            <div class="card-header">
-                Role Id : @role.Id
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">@role.Name</h5>
-            </div>
+<div class="card mb-3">
+    <div class="card-header">
+        Role Id : @role.Id
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@role.Name</h5>
+    </div>
+    <a asp-controller="Administrador" asp-action="EditRole"
+       asp-route-id="@role.Id" class="btn btn-primary">
+        Edit
+    </a>
 
-        </div>
+</div>
     }
 }
 else

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ElMercaditoWeb.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ElMercaditoWeb.Controllers
 {
@@ -33,6 +34,8 @@ namespace ElMercaditoWeb.Controllers
 
 
         // GET: Productos/Details/5
+
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
