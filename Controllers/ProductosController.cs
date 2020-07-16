@@ -7,12 +7,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ElMercaditoWeb.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using Newtonsoft.Json;
 
 namespace ElMercaditoWeb.Controllers
 {
     public class ProductosController : Controller
     {
         private readonly SupermercadoContext _context;
+     
 
         public ProductosController(SupermercadoContext context)
         {
@@ -25,6 +28,36 @@ namespace ElMercaditoWeb.Controllers
             var supermercadoContext = _context.Productos.Include(p => p.IdCategoriaNavigation);
             return View(await supermercadoContext.ToListAsync());
         }
+
+        public IEnumerable<Productos> GetTodo()
+        {
+            var todo = _context.Productos.FromSqlRaw("Select * from productos").ToList();
+            return todo;
+
+
+        }
+
+        public IEnumerable<Productos> GetFrutas()
+        {
+            var frutas = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 1").ToList();
+            return frutas;
+
+            
+        }
+
+        public IEnumerable<Productos> GetCarnes()
+        {
+            var carnes = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 2").ToList();
+            return carnes;
+        }
+
+        public IEnumerable<Productos> GetEmbutidos()
+        {
+            var carnes = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 4").ToList();
+            return carnes;
+        }
+
+
 
         public async Task<IActionResult> ClientesProductos()
         {

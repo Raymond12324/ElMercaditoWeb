@@ -5,8 +5,14 @@
 }
 
     <div class="container">
+
         <a asp-controller="Home" asp-action="pago" class="btn btn-outline-success mt-4"><i class="fas fa-shopping-cart"></i>Carrito</a>
-        <br>       
+        <a class="btn btn-primary" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
+        <a class="btn btn-primary" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
+        <a class="btn btn-primary" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
+
+        <button class="btn btn-danger" onclick="frutas()">Buscar</button>
+        <br>
         <div class="row">
             @foreach (var item in Model)
             {
