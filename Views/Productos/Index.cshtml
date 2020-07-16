@@ -59,9 +59,9 @@
                         @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.Nombre)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.IdProductos">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.IdProductos">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.IdProductos">Delete</a>
+                        <a asp-action="Edit" asp-route-id="@item.IdProductos" class="btn btn-primary"><img src="https://image.flaticon.com/icons/svg/860/860814.svg" height="20"/></a> |
+                        <a asp-action="Details" asp-route-id="@item.IdProductos"><img src="https://image.flaticon.com/icons/svg/751/751463.svg" height="20"/></a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdProductos" class="btn btn-danger"><img src="https://image.flaticon.com/icons/svg/1214/1214428.svg" height="20"/></a>
                     </td>
                 </tr>
             }
