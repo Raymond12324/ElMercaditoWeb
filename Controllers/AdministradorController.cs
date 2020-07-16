@@ -7,9 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ElMercaditoWeb.Models;
 using Microsoft.AspNetCore.Identity;
-
-
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace ElMercaditoWeb.Controllers
 {
@@ -35,7 +33,7 @@ namespace ElMercaditoWeb.Controllers
             return View(user);
         }
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Principal ()
         {
             return View();
