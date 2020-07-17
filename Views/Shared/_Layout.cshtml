@@ -40,7 +40,7 @@
                             <a asp-controller="Productos" asp-action="ClientesProductos" class="nav-link">Articulos</a>
                         </li>
 
-                        
+
                     }
 
                     @if ((await AuthorizationService.AuthorizeAsync(User, "Admin")).Succeeded)
@@ -56,7 +56,12 @@
 
 
                     }
+
                     <partial name="_loginPartial" />
+
+                    <li>
+                        <a asp-controller="Home" asp-action="pago" class="nav-link active"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
 
                 </ul>
 

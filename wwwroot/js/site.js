@@ -8,4 +8,6 @@ async function frutas()
     var resp = await fetch(url);
     var data = await resp.json();
     console.log(data);
+    console.log(data);
+
 }

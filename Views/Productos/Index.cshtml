@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<ElMercaditoWeb.Models.Productos>
 
-@{
-    ViewData["Title"] = "Index";
-}
 
-<h1>Index</h1>
+
+
 <div class="container">
+    <h1 class="text-center">Administracion de productos</h1>
     <p>
-        <a class="btn btn-primary" asp-action="Create">Create New</a>
+        <a class="btn btn-primary" asp-action="Create">Agregar producto</a>
     </p>
     <p>
         <a class="btn btn-primary" asp-controller="Categorias" asp-action="Index">Agregar Categoria</a>
