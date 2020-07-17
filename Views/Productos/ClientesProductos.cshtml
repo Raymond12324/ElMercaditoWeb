@@ -24,21 +24,15 @@
             </div>
         </div>
 
-        <div class="dropdown text-center">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categorias
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
-                <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
-                <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
-                <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
-            </div>
-        </div>
 
 
-        <br>
+
+
         <div class="row">
+
+           
+
+
             @foreach (var item in Model)
             {
 
@@ -50,12 +44,13 @@
                             <h5 class=""> @Html.DisplayFor(modelItem => item.Nombre)</h5>
                             <h5 class="card-title">@Html.DisplayFor(modelItem => item.Precio)</h5>
                             <p class="card-text"></p>
-                            <a class="btn btn-outline-dark" type="submit" name="btnAccion"><i class="fas fa-shopping-basket"></i>Agregar</a>
+                            <a  type="submit" name="btnAccion" class="btn btn-outline-dark" ><i class="fas fa-shopping-basket"></i>Agregar</a>
                         </div>
                     </div>
                 </div>
             }
 
         </div>
+        
 
     </div>

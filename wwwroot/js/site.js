@@ -11,3 +11,4 @@ async function frutas()
     console.log(data);
 
 }
+
