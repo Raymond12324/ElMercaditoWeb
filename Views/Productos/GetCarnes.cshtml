@@ -1,0 +1,40 @@
+﻿
+
+
+
+<h1>@ViewData["Nombre"]</h1>
+
+<div class="container">
+
+    <div class="dropdown text-center">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorias
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
+            <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
+            <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
+            <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
+        </div>
+    </div>
+
+    <div class="row">
+        @for (int i = 0; i < ViewBag.numeroDatos; i++)
+        {
+
+            <div class="col-lg-3 col-md-6 col-sm-8 mt-2">
+                <div class="card text-center shadow">
+                    
+                    <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@ViewBag.datos[i].Imagen" height="250" width="200" alt="">
+                    <div class="card-body">
+                        <h5> @ViewBag.datos[i].Nombre</h5>
+                        <h5 class="card-title">@ViewBag.datos[i].Precio</h5>
+                        <p class="card-text"></p>
+                        <a class="btn btn-outline-dark" type="submit" name="btnAccion"><i class="fas fa-shopping-basket"></i>Agregar</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

@@ -194,3 +194,6 @@ C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\EditUsersInRole.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\Principal.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Administrador\MapaPedidos.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\GetFrutas.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\GetCarnes.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\GetEmbutidos.cshtml.g.cs

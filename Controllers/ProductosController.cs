@@ -9,6 +9,7 @@ using ElMercaditoWeb.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace ElMercaditoWeb.Controllers
 {
@@ -37,24 +38,45 @@ namespace ElMercaditoWeb.Controllers
 
         }
 
-        public IEnumerable<Productos> GetFrutas()
+        public IActionResult GetFrutas()
         {
             var frutas = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 1").ToList();
-            return frutas;
+
+
+            ViewBag.numeroDatos = frutas.Count();
+            ViewBag.datos = frutas;
+
+           
+
+            return View();
 
             
         }
 
-        public IEnumerable<Productos> GetCarnes()
+        public IActionResult GetCarnes()
         {
             var carnes = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 2").ToList();
-            return carnes;
+
+
+            ViewBag.numeroDatos = carnes.Count();
+            ViewBag.datos = carnes;
+
+
+
+            return View();
         }
 
-        public IEnumerable<Productos> GetEmbutidos()
+        public IActionResult GetEmbutidos()
         {
-            var carnes = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 4").ToList();
-            return carnes;
+            var embutidos = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 4").ToList();
+
+
+            ViewBag.numeroDatos = embutidos.Count();
+            ViewBag.datos = embutidos;
+
+
+
+            return View();
         }
 
 
