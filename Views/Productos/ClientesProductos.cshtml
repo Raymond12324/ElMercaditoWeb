@@ -3,54 +3,152 @@
 @{
     ViewData["Title"] = "Index";
 }
+<br />
+<div class="container">
 
-    <div class="container">
-
-        <div class="jumbotron bg-transparent">
-            <h1 class="display-4">Nuestros Productos!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <div class="dropdown">
-                <a class="btn btn-secondary btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categorias
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
-                    <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
-                    <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
-                    <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
-                </div>
+    <div class="jumbotron bg-transparent border shadow">
+        <h1 class="display-4">Nuestros Productos!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <div class="dropdown">
+            <a class="btn btn-warning btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
+                <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
+                <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
+                <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
             </div>
         </div>
+    </div>
 
-
-
-
-
-        <div class="row">
-
-           
-
-
-            @foreach (var item in Model)
-            {
-
-                <div class="col-lg-3 col-md-6 col-sm-8 mt-2">
-                    <div class="card text-center shadow">
-
-                        <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@Html.DisplayFor(modelItem => item.Imagen)" height="250" width="200" alt="">
-                        <div class="card-body">
-                            <h5 class=""> @Html.DisplayFor(modelItem => item.Nombre)</h5>
-                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Precio)</h5>
-                            <p class="card-text"></p>
-                            <a  type="submit" name="btnAccion" class="btn btn-outline-dark" ><i class="fas fa-shopping-basket"></i>Agregar</a>
-                        </div>
-                    </div>
-                </div>
-            }
-
+    <div class="jumbotron jumbotron-fluid shadow border bg-transparent text-center">
+        <div class="container">
+            <img src="https://image.flaticon.com/icons/svg/3082/3082025.svg" class="text-center" height="200" />
+            <h1 class="display-4">Frutas</h1>
+            <p class="lead">This is a modified <span class="text-warning">jumbotron</span> that occupies the entire horizontal space of its parent.</p>
         </div>
+    </div>
+
+
+    <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center">
+        <div class="container">
+            <img src="https://image.flaticon.com/icons/svg/3082/3082041.svg" class="text-center" height="200" />
+            <h1 class="display-4">Carnes</h1>
+            <p class="lead">This is a modified <span class="text-warning">jumbotron</span></p>
+        </div>
+    </div>
+
+
+    <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center">
+        <div class="container">
+            <img src="https://image.flaticon.com/icons/svg/3082/3082054.svg" class="text-center" height="200" />
+            <h1 class="display-4">Embutidos</h1>
+            <p class="lead">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+
+    <hr class="shadow" />
+    <h1 class="text-center display-3">Galeria</h1>
+    <hr class="shadow">
+    <div class="row">
         
 
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid shadow">
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
+                <figure class="col-lg-4">
+                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
+                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid shadow" />
+                    </a>
+                </figure>
+
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+    <div class="row">
+
+
+
+
+       @foreach (var item in Model)
+        {
+
+            <div class="col-lg-3 col-md-6 col-sm-8 mt-2">
+                <div class="card text-center shadow">
+
+                    <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@Html.DisplayFor(modelItem => item.Imagen)" height="250" width="200" alt="">
+                    <div class="card-body">
+                        <h5 class=""> @Html.DisplayFor(modelItem => item.Nombre)</h5>
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Precio)</h5>
+                        <p class="card-text"></p>
+                        <a type="submit" name="btnAccion" class="btn btn-outline-dark"><i class="fas fa-shopping-basket"></i>Agregar</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+       -->
+
+
+</div>
