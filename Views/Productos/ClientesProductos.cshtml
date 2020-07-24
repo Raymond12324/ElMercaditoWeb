@@ -5,126 +5,134 @@
 }
 <br />
 <div class="container">
-
-    <div class="jumbotron bg-transparent border shadow">
-        <h1 class="display-4">Nuestros Productos!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <div class="dropdown">
-            <a class="btn btn-warning btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categorias
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
-                <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
-                <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
-                <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
+    <div class="row">
+        <div class="jumbotron bg-transparent border shadow">
+            <h1 class="display-4">Nuestros Productos!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <div class="dropdown">
+                <a class="btn btn-warning btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categorias
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
+                    <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
+                    <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
+                    <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="jumbotron jumbotron-fluid shadow border bg-transparent text-center">
-        <div class="container">
-            <img src="https://image.flaticon.com/icons/svg/3082/3082025.svg" class="text-center" height="200" />
-            <h1 class="display-4">Frutas</h1>
-            <p class="lead">This is a modified <span class="text-warning">jumbotron</span> that occupies the entire horizontal space of its parent.</p>
+        <div class="jumbotron jumbotron-fluid shadow border bg-transparent text-center col-lg-6">
+            <div class="container">
+                <img src="https://image.flaticon.com/icons/svg/3082/3082025.svg" class="text-center" height="200" />
+                <h1 class="display-4">Frutas</h1>
+                <p class="lead">This is a modified <span class="text-warning">jumbotron</span> that occupies the entire horizontal space of its parent.</p>
+            </div>
         </div>
-    </div>
 
 
-    <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center">
-        <div class="container">
-            <img src="https://image.flaticon.com/icons/svg/3082/3082041.svg" class="text-center" height="200" />
-            <h1 class="display-4">Carnes</h1>
-            <p class="lead">This is a modified <span class="text-warning">jumbotron</span></p>
+        <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center col-lg-6">
+            <div class="container">
+                <img src="https://image.flaticon.com/icons/svg/3082/3082041.svg" class="text-center" height="200" />
+                <h1 class="display-4">Carnes</h1>
+                <p class="lead">This is a modified <span class="text-warning">jumbotron</span></p>
+            </div>
         </div>
-    </div>
 
 
-    <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center">
-        <div class="container">
-            <img src="https://image.flaticon.com/icons/svg/3082/3082054.svg" class="text-center" height="200" />
-            <h1 class="display-4">Embutidos</h1>
-            <p class="lead">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
+        <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center col-lg-6 mt-n4">
+            <div class="container">
+                <img src="https://image.flaticon.com/icons/svg/3082/3082054.svg" class="text-center" height="200" />
+                <h1 class="display-4">Embutidos</h1>
+                <p class="lead">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
+            </div>
         </div>
-    </div>
 
-    <hr class="shadow" />
-    <h1 class="text-center display-3">Galeria</h1>
-    <hr class="shadow">
-    <div class="row">
-        
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid shadow">
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-                <figure class="col-lg-4">
-                    <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
-                        <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid shadow" />
-                    </a>
-                </figure>
-
-    </div>
+        <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center col-lg-6 mt-n4">
+            <div class="container">
+                <img src="https://image.flaticon.com/icons/svg/2907/2907424.svg" class="text-center" height="200" />
+                <h1 class="display-4">Bebidas</h1>
+                <p class="lead">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+        <div />
+        <hr class="shadow" />
+        <h1 class="text-center display-3">Galeria</h1>
+        <hr class="shadow">
+        <div class="row">
 
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" class="img-fluid shadow">
+                </a>
+            </figure>
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
 
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
+
+            <figure class="col-lg-4">
+                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" class="img-fluid shadow" />
+                </a>
+            </figure>
+
+        </div>
 
 
 
 
-    <!--
+
+
+
+
+
+
+
+
+
+        <!--
     <div class="row">
 
 
@@ -151,4 +159,4 @@
        -->
 
 
-</div>
+    </div>

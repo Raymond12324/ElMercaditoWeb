@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Categorias\\Edit.cshtml",
       "TargetPath": "Views\\Categorias\\Edit.cshtml",
       "FileKind": "mvc"
@@ -20546,8 +20551,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Categorias\\Create.cshtml",
       "TargetPath": "Views\\Categorias\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20568,6 +20588,11 @@
     {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20636,8 +20661,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Productos\\Delete.cshtml",
       "TargetPath": "Views\\Productos\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20656,6 +20691,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Administrador\\ListUser.cshtml",
       "TargetPath": "Views\\Administrador\\ListUser.cshtml",
       "FileKind": "mvc"
@@ -20663,6 +20703,11 @@
     {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Productos\\Edit.cshtml",
       "TargetPath": "Views\\Productos\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
