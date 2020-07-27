@@ -23,17 +23,25 @@ namespace ElMercaditoWeb.Controllers
             _context = context;
         }
 
+        public  IActionResult pago()
+        {
+            return View();   
+        }
+
         // GET: Productos
+
         public async Task<IActionResult> Index()
         {
             var supermercadoContext = _context.Productos.Include(p => p.IdCategoriaNavigation);
             return View(await supermercadoContext.ToListAsync());
         }
 
-        public IEnumerable<Productos> GetTodo()
+        public IActionResult GetTodos()
         {
             var todo = _context.Productos.FromSqlRaw("Select * from productos").ToList();
-            return todo;
+            ViewBag.numeroDatos = todo.Count();
+            ViewBag.datos = todo;
+            return View();
 
 
         }
@@ -246,5 +254,7 @@ namespace ElMercaditoWeb.Controllers
         {
             return _context.Productos.Any(e => e.IdProductos == id);
         }
+
+     
     }
 }

@@ -18,7 +18,7 @@
                     Categorias
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
+                    <a class="dropdown-item" asp-controller="Productos" asp-action="GetTodos">Todos los productos</a>
                     <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
                     <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
                     <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
@@ -29,9 +29,11 @@
 
         <div class="jumbotron jumbotron-fluid shadow border bg-transparent text-center col-lg-3">
             <div class="container">
-                <img src="https://image.flaticon.com/icons/svg/3082/3082025.svg" class="text-center" height="100" />
-                <h1 class="">Frutas</h1>
-                <p class="">This is a modified <span class="text-warning">jumbotron</span> that occupies the entire horizontal space of its parent.</p>
+                <a asp-controller="Productos" asp-action="GetFrutas" style="text-decoration:none;">
+                    <img src="https://image.flaticon.com/icons/svg/3082/3082025.svg" class="text-center" height="100" />
+                    </a>
+                    <h1 class="">Frutas</h1>
+                    <p class="">This is a modified <span class="text-warning">jumbotron</span> that occupies the entire horizontal space of its parent.</p>
             </div>
         </div>
 
@@ -51,17 +53,21 @@
 
         <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center col-lg-3 ">
             <div class="container">
-                <img src="https://image.flaticon.com/icons/svg/3082/3082054.svg" class="text-center" height="100" />
-                <h1 class="">Embutidos</h1>
-                <p class="">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
+                <a asp-controller="Productos" asp-action="GetEmbutidos" style="text-decoration:none;">
+                    <img src="https://image.flaticon.com/icons/svg/3082/3082054.svg" class="text-center" height="100" />
+                    </a>
+                    <h1 class="">Embutidos</h1>
+                    <p class="">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
             </div>
         </div>
 
         <div class="jumbotron jumbotron-fluid bg-transparent shadow border text-center col-lg-3 ">
             <div class="container">
-                <img src="https://image.flaticon.com/icons/svg/2907/2907424.svg" class="text-center" height="100" />
-                <h1 class="">Bebidas</h1>
-                <p class="">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
+                <a asp-controller="Productos" asp-action="GetBebidas" style="text-decoration:none;">
+                    <img src="https://image.flaticon.com/icons/svg/2907/2907424.svg" class="text-center" height="100" />
+                    </a>
+                    <h1 class="">Bebidas</h1>
+                    <p class="">This is a modifieds <span class="text-warning">jumbotron</span>  that occupies the entire horizontal space of its parent.</p>
             </div>
         </div>
         <div />

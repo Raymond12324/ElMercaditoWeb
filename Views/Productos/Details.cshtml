@@ -5,54 +5,35 @@
 }
 
     <div class="container">
-        <h1>Detalles</h1>
+     
+        <div class="container">
+        
+            <div class="row">
+                <div class="col-8 text-center card">
+                    <img class="img-fluid" src=" @Html.DisplayFor(model => model.Imagen)" height="500" />
+                </div>
+                <div class="col-4 card text-center p-5">
+                    <h2 class="card-title">@Html.DisplayFor(model => model.Nombre)</h2>
+                    <hr />
+                    <h5><span class="text-secondary">Precio:</span>  @Html.DisplayFor(model => model.Precio)$</h5>
+                    <hr />
+                    <h5 class=""><span class="text-secondary">Descripcion:</span>  @Html.DisplayFor(model => model.Descripcion)</h5>
+                    <hr />
+                    <h5><span class="text-secondary">En stock:</span> @Html.DisplayFor(model => model.Disponibilidad)</h5>
+                    <hr />
+                    <h5>Cantidad</h5><input type="number" />
+                    <hr />
 
-        <div>
-            <h4>Productos</h4>
-            <hr />
-            <dl class="row">
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Nombre)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Nombre)
-                </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Descripcion)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Descripcion)
-                </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Precio)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Precio)
-                </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Imagen)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Imagen)
-                </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Disponibilidad)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Disponibilidad)
-                </dd>
-                <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.IdCategoriaNavigation)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.IdCategoriaNavigation.Nombre)
-                </dd>
-            </dl>
+                    <a asp-controller="Productos" asp-action="pago" class="btn btn-outline-success mt-4"><i class="fas fa-shopping-cart"></i>Comprar</a>
+                    <a asp-controller="Productos" asp-action="pago" class="btn btn-outline-dark mt-4"> <img src="https://image.flaticon.com/icons/svg/20/20183.svg" height="25"> Agregar y seguir comprando</a>
+                </div>
+            </div>
+                
+            
         </div>
 
         <div>
-            <a asp-action="Edit" asp-route-id="@Model.IdProductos">Editar</a> |
-            <a asp-action="Index">Atras</a>
+            <a asp-action="GetTodos">Volver a la lista</a>
         </div>
 
     </div>

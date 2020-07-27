@@ -208,3 +208,10 @@ C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\GetBebidas.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\Getespecifico.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Sliders\Create.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Sliders\Delete.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Sliders\Details.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Sliders\Edit.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Sliders\Index.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\GetTodos.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\pago.cshtml.g.cs

@@ -24,6 +24,7 @@ namespace ElMercaditoWeb.Models
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<Categoria> Categoria { get; set; }
         public virtual DbSet<Productos> Productos { get; set; }
+        public virtual DbSet<Slider> Slider { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -197,6 +198,30 @@ namespace ElMercaditoWeb.Models
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__productos__idCat__3B75D760");
+            });
+
+            modelBuilder.Entity<Slider>(entity =>
+            {
+                entity.ToTable("slider");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.Img1)
+                    .HasColumnName("img1")
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Img2)
+                    .HasColumnName("img2")
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Img3)
+                    .HasColumnName("img3")
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);
