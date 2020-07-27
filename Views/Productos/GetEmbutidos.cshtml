@@ -1,29 +1,42 @@
-﻿
-
+﻿@model Productos
 
 <h1>@ViewData["Nombre"]</h1>
 
+
+<hr />
+<div class="col-lg-12 col-sm-12 col-md-12 border mt-2 d-flex w-100">
+
+    <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
+    <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
+    <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
+    <a class="dropdown-item" asp-controller="Productos" asp-action="GetBebidas">Bebidas</a>
+    <a class="dropdown-item" asp-controller="Productos" asp-action="GetBebidas">Varios</a>
+
+
+</div>
+
+<hr />
 <div class="container">
+    <form action="/Productos/Getespecifico/" method="post" class="ml-auto mr-auto mt-4">
+        @Html.TextBoxFor(model => model.Nombre)
+        <input id="export-btn" type="submit" value="buscar" class="btn btn-outline-dark btn-sm" />
 
-    <div class="dropdown text-center">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categorias
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" asp-controller="Productos" asp-action="ClientesProductos">Principal</a>
-            <a class="dropdown-item" asp-controller="Productos" asp-action="GetFrutas">Frutas</a>
-            <a class="dropdown-item" asp-controller="Productos" asp-action="GetCarnes">Carnes</a>
-            <a class="dropdown-item" asp-controller="Productos" asp-action="GetEmbutidos">Embutidos</a>
-        </div>
-    </div>
+    </form>
+</div>
 
+<hr />
+
+<div class="container">
     <div class="row">
+
+
+
         @for (int i = 0; i < ViewBag.numeroDatos; i++)
         {
 
-            <div class="col-lg-3 col-md-6 col-sm-8 mt-2">
+            <div class="col-lg-3 col-md-6 col-sm-8 mt-4">
                 <div class="card text-center shadow">
-                   
+
                     <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@ViewBag.datos[i].Imagen" height="250" width="200" alt="">
                     <div class="card-body">
                         <h5> @ViewBag.datos[i].Nombre</h5>
@@ -35,5 +48,7 @@
             </div>
         }
     </div>
-
 </div>
+
+
+

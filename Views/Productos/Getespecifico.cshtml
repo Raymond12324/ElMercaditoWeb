@@ -15,6 +15,7 @@
 
 </div>
 
+
 <hr />
 <div class="container">
     <form action="/Productos/Getespecifico/" method="post" class="ml-auto mr-auto mt-4">
@@ -25,32 +26,43 @@
 </div>
 
 <hr />
+
 <div class="container">
     <div class="row">
-
-
-
-        @for (int i = 0; i < ViewBag.numeroDatos; i++)
+        @if (ViewBag.numeroDatos != 0)
         {
+            @for (int i = 0; i < ViewBag.numeroDatos; i++)
+            {
 
-            <div class="col-lg-3 col-md-6 col-sm-8 mt-2">
-                <div class="card text-center shadow">
+                <div class="col-lg-3 col-md-6 col-sm-8 mt-4">
+                    <div class="card text-center shadow">
 
-                    <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@ViewBag.datos[i].Imagen" height="250" width="200" alt="">
-                    <div class="card-body">
-                        <h5> @ViewBag.datos[i].Nombre</h5>
-                        <h5 class="card-title">@ViewBag.datos[i].Precio</h5>
-                        <p class="card-text"></p>
-                        <btn class="btn btn-outline-dark" type="submit" name="btnAccion" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-shopping-basket"></i>Agregar</btn>
+                        <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@ViewBag.datos[i].Imagen" height="250" width="200" alt="">
+                        <div class="card-body">
+                            <h5> @ViewBag.datos[i].Nombre</h5>
+                            <h5 class="card-title">@ViewBag.datos[i].Precio</h5>
+                            <p class="card-text"></p>
+                            <btn class="btn btn-outline-dark" type="submit" name="btnAccion" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-shopping-basket"></i>Agregar</btn>
 
 
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+
         }
+        else
+        {
+            <h1 class="display-1 text-danger">NO hay ningun Producto con ese nombre</h1>
+
+        }
+
+
+
     </div>
 </div>
+
 
 
 @for (int i = 0; i < ViewBag.numeroDatos; i++)

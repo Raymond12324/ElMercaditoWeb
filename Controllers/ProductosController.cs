@@ -38,6 +38,19 @@ namespace ElMercaditoWeb.Controllers
 
         }
 
+        [HttpPost]
+        public IActionResult Getespecifico(string nombre)
+        {
+            
+            var ProductoEspecifico = _context.Productos.FromSqlRaw($"Select * from productos where nombre ='{nombre}'").ToList();
+            ViewBag.numeroDatos = ProductoEspecifico.Count();
+            ViewBag.datos = ProductoEspecifico;
+
+            return View();
+
+
+        }
+
         public IActionResult GetFrutas()
         {
             var frutas = _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 1").ToList();
@@ -73,6 +86,19 @@ namespace ElMercaditoWeb.Controllers
 
             ViewBag.numeroDatos = embutidos.Count();
             ViewBag.datos = embutidos;
+
+
+
+            return View();
+        }
+
+        public IActionResult GetBebidas()
+        {
+            var bebidas= _context.Productos.FromSqlRaw("Select * from productos where idCategoria = 5").ToList();
+
+
+            ViewBag.numeroDatos = bebidas.Count();
+            ViewBag.datos = bebidas;
 
 
 
