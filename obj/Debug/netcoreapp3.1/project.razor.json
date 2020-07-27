@@ -20611,6 +20611,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Productos\\Getespecifico.cshtml",
+      "TargetPath": "Views\\Productos\\Getespecifico.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -20693,6 +20698,11 @@
     {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Productos\\GetBebidas.cshtml",
+      "TargetPath": "Views\\Productos\\GetBebidas.cshtml",
       "FileKind": "mvc"
     },
     {
