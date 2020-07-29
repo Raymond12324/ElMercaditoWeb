@@ -46,6 +46,15 @@ namespace ElMercaditoWeb.Controllers
 
         }
 
+        public IList<Productos> Getdata()
+        {
+            return _context.Productos.FromSqlRaw("Select * from productos").ToList();
+           
+            
+
+
+        }
+
         [HttpPost]
         public IActionResult Getespecifico(string nombre)
         {

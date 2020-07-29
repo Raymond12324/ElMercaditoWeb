@@ -3,13 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <div class="container">
-
-        <h1>Index</h1>
+    <div class="container mt-5 card">
+      
+        <h1>Manejador de slider</h1>
 
         
         
-        <table class="table">
+        <table class="table mt-3">
             <thead>
                 <tr>
                     <th>
@@ -27,22 +27,21 @@
             <tbody>
                 @foreach (var item in Model)
                 {
+                    <div><a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a>
+                         <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary">Detalles</a>
+                    </div>
                     <tr>
                         <td>
-                            <img src="@Html.DisplayFor(modelItem => item.Img1)" height="100" />
+                            <img src="@Html.DisplayFor(modelItem => item.Img1)" height="175" />
                         </td>
                         <td>
-                            <img src="@Html.DisplayFor(modelItem => item.Img2)" height="100" />
+                            <img src="@Html.DisplayFor(modelItem => item.Img2)" height="175" />
                         </td>
                         <td>
-                            <img src="@Html.DisplayFor(modelItem => item.Img3)" height="100"/>
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                            
+                            <img src="@Html.DisplayFor(modelItem => item.Img3)" height="175" />
                         </td>
                     </tr>
+
                 }
             </tbody>
         </table>

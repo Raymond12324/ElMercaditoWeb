@@ -42,11 +42,60 @@
                             <td>4</td>
                             <td>300$</td>
                         </tr>
+                        <input value="100" id="total" type="hidden" />
                     </tbody>
+                    
                 </table>
+                <div>Total: 100</div>
 
+                <div id="paypal-button-container"></div>
+
+                <!-- Include the PayPal JavaScript SDK -->
+                <script src="https://www.paypal.com/sdk/js?client-id=ATLmCSkbzC8bA7ijaYsDFQyBW_ZCopJOxLDynvJj3gvtHHuWWLim2gcdADai5xNYViUdktKoMrQ9UJtj&currency=USD"></script>
+
+                <script>
+
+
+                    fetch("https://localhost:44314/Productos/Getdata")
+                       .then(response => response.json())
+                        .then(data => alert(data))
+
+                    await response.text();
+                    
+
+                    
+                   
+
+                    var total = document.querySelector('#total').value;
+                    // Render the PayPal button into #paypal-button-container
+                    paypal.Buttons({
+
+                        // Set up the transaction
+                        createOrder: function (data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: data[1].precio
+                                    }
+                                }]
+                            });
+                        },
+
+                        // Finalize the transaction
+                        onApprove: function (data, actions) {
+                            return actions.order.capture().then(function (details) {
+                                // Show a success message to the buyer
+                                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                            });
+                        }
+
+
+                    }).render('#paypal-button-container');
+                </script>
+                <p id="botonP"></p>
                 <p class="card-text">Pago via paypal su producto se estara entregando pronto</p>
-                <a href="#" class="btn btn-outline-success">Realizar pago <i class="far fa-money-bill-alt"></i></a>
+                <a href="#" class="btn btn-outline-success" >Realizar pago <i class="far fa-money-bill-alt"></i></a>
+
             </div>
             <div class="card-footer text-muted">
                 2 days ago
@@ -54,3 +103,6 @@
         </div>
     </div>
 </div>
+
+    
+                
