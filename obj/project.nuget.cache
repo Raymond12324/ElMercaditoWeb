@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ws2YYnGUYskhk7a30Ddrk1LkmGOPi3vDqyi2cjU2uB8w3i+4iVwenI1ae9TrOID0lH0MHwedWEJNak109MzS/w==",
+  "dgSpecHash": "NGt4nmpB5HLOwYyoogJDLHm45Cdib3zJjf/EEiHWqBoGYWbSPUAo/ptarzd0IrQaZ7aEJX3ndQcTwQ9wE5h9RQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj",
+  "projectFilePath": "C:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\raymond\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\raymond\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",

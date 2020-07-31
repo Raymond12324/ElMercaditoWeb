@@ -1,4 +1,5 @@
-﻿<div class="container">
+﻿@model Productos
+<div class="container">
     <div class="row">
 
         <br>
@@ -24,29 +25,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @for (var i = 0; i < ViewBag.numeroDatos; i++)
+                        {
+                            var total = (ViewBag.datos[i].Precio * ViewBag.Cantidad);
                         <tr>
-                            <th scope="row">1</th>
-                            <td>mango</td>
-                            <td>4</td>
-                            <td>300$</td>
+                            <th scope="row">@i</th>
+                            <td>@ViewBag.datos[i].Nombre</td>
+                            <td>@ViewBag.Cantidad</td>
+                            <td>@ViewBag.datos[i].Precio</td>
+                            @{ var total_todo = (total * ViewBag.numeroDatos); }
+                            <td>Total : @total</td>
                         </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>mango</td>
-                            <td>4</td>
-                            <td>300$</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>mango</td>
-                            <td>4</td>
-                            <td>300$</td>
-                        </tr>
-                        <input value="100" id="total" type="hidden" />
+                            <input value="@total_todo" id="total" type="hidden" />
+                        }
+
                     </tbody>
-                    
+
                 </table>
-                <div>Total: 100</div>
+                <div id="total_show"></div>
 
                 <div id="paypal-button-container"></div>
 
@@ -56,45 +52,50 @@
                 <script>
 
 
-                    fetch("https://localhost:44314/Productos/Getdata")
-                       .then(response => response.json())
-                        .then(data => alert(data))
-
-                    await response.text();
-                    
-
-                    
-                   
-
-                    var total = document.querySelector('#total').value;
-                    // Render the PayPal button into #paypal-button-container
-                    paypal.Buttons({
-
-                        // Set up the transaction
-                        createOrder: function (data, actions) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    amount: {
-                                        value: data[1].precio
-                                    }
-                                }]
-                            });
-                        },
-
-                        // Finalize the transaction
-                        onApprove: function (data, actions) {
-                            return actions.order.capture().then(function (details) {
-                                // Show a success message to the buyer
-                                alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                            });
-                        }
 
 
-                    }).render('#paypal-button-container');
+                        var total = document.querySelector('#total').value;
+                        var total_show = document.querySelector('#total_show').innerHTML = `El total es: ${total}`;
+                        // Render the PayPal button into #paypal-button-container
+                        paypal.Buttons({
+
+                            // Set up the transaction
+                            createOrder: function (data, actions) {
+                                return actions.order.create({
+                                    purchase_units:[{
+                                        amount: {
+                                            value: @ViewBag.datos[2].Precio,
+                                            currency: 'DOP'
+
+
+
+                                        }
+                                    }]
+                                });
+                            },
+
+                            // Finalize the transaction
+                            onApprove: function (data, actions) {
+                                return actions.order.capture().then(function (details) {
+                                    // Show a success message to the buyer
+                                    alert('Compra realizada con exito ' + details.payer.name.given_name + '!');
+                                });
+                            }
+
+
+                        }).render('#paypal-button-container');
+
+
+
+
+
+
+
+
                 </script>
                 <p id="botonP"></p>
                 <p class="card-text">Pago via paypal su producto se estara entregando pronto</p>
-                <a href="#" class="btn btn-outline-success" >Realizar pago <i class="far fa-money-bill-alt"></i></a>
+                <a href="#" class="btn btn-outline-success">Realizar pago <i class="far fa-money-bill-alt"></i></a>
 
             </div>
             <div class="card-footer text-muted">
@@ -104,5 +105,4 @@
     </div>
 </div>
 
-    
-                
+

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj": {}
+    "C:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj": {}
   },
   "projects": {
-    "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj": {
+    "C:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj",
+        "projectUniqueName": "C:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj",
         "projectName": "ElMercaditoWeb",
-        "projectPath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj",
+        "projectPath": "C:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\ElMercaditoWeb.csproj",
         "packagesPath": "C:\\Users\\raymond\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\obj\\",
+        "outputPath": "C:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

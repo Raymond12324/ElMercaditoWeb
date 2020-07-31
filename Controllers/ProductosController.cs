@@ -23,9 +23,14 @@ namespace ElMercaditoWeb.Controllers
             _context = context;
         }
 
-        public  IActionResult pago()
+        public  IActionResult pago(int Cantidad)
         {
-            return View();   
+            var todo = _context.Productos.FromSqlRaw("Select * from productos").ToList();
+            ViewBag.numeroDatos = todo.Count();
+            ViewBag.datos = todo;
+            ViewBag.Cantidad = Cantidad;
+         
+            return View();
         }
 
         // GET: Productos
@@ -46,14 +51,7 @@ namespace ElMercaditoWeb.Controllers
 
         }
 
-        public IList<Productos> Getdata()
-        {
-            return _context.Productos.FromSqlRaw("Select * from productos").ToList();
-           
-            
-
-
-        }
+      
 
         [HttpPost]
         public IActionResult Getespecifico(string nombre)
@@ -136,6 +134,8 @@ namespace ElMercaditoWeb.Controllers
         [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
+            
+
             if (id == null)
             {
                 return NotFound();

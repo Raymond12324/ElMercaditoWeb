@@ -13,6 +13,8 @@ namespace ElMercaditoWeb.Models
         public string Imagen { get; set; }
         public int? Disponibilidad { get; set; }
 
+        
+
         public virtual Categoria IdCategoriaNavigation { get; set; }
     }
 }
