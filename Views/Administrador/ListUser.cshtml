@@ -12,7 +12,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        
                         <th scope="col">Mail</th>
                         <th scope="col">Id</th>
                     </tr>
@@ -21,8 +21,10 @@
                 <tbody>
                     @foreach (var user in Model)
                     {
+                        var i = 0;
+                        
                         <tr>
-                            <th scope="row">1</th>
+                          
                             <td>@user.Email</td>
                             <td>@user.Id</td>
                         </tr>

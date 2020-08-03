@@ -15,7 +15,7 @@ namespace ElMercaditoWeb.Models
 
         public string Id { get; set; }
 
-        [Required(ErrorMessage = "Role Name is required")]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string RoleName { get; set; }
 
         public List<string> Users { get; set; }

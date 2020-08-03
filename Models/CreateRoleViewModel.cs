@@ -8,7 +8,7 @@ namespace ElMercaditoWeb.Models
 {
     public class CreateRoleViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string RoleName { get; set; }
     }
 }
