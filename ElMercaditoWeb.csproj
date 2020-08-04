@@ -36,8 +36,4 @@
     <PackageReference Include="PayPal" Version="1.9.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

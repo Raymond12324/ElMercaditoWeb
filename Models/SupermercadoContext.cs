@@ -32,7 +32,7 @@ namespace ElMercaditoWeb.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=RAYMOND-PC;Database=Supermercado;User Id=sa; Password=hola;");
+                optionsBuilder.UseSqlServer("Data Source=SQL5063.site4now.net;Initial Catalog=DB_A65787_MercadoAdmin;User Id=DB_A65787_MercadoAdmin_admin;Password=hola1234");
             }
         }
 
