@@ -1,4 +1,7 @@
 ﻿@model IEnumerable<ElMercaditoWeb.Models.Productos>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @{
     ViewData["Title"] = "Index";
@@ -7,6 +10,7 @@
 
 <br />
 <div class="container">
+   
     <div class="row">
         <div class="jumbotron bg-transparent border shadow">
             <h1 class="display-4">Nuestros Productos!</h1>
@@ -26,14 +30,14 @@
                 </div>
             </div>
         </div>
-     
+
         <div class="col-lg-12">
             <br />
             <hr /><h1 class="display-4 text-center">Catrgorias Principales!</h1>
             <hr />
             <br />
         </div>
-      
+
         <div class="jumbotron jumbotron-fluid shadow border bg-transparent text-center col-lg-3">
             <div class="container">
                 <a asp-controller="Productos" asp-action="GetFrutas" style="text-decoration:none;">
@@ -153,30 +157,30 @@
 
 
         <!--
-    <div class="row">
+        <div class="row">
 
 
 
 
-       @foreach (var item in Model)
-        {
+           @foreach (var item in Model)
+            {
 
-            <div class="col-lg-3 col-md-6 col-sm-8 mt-2">
-                <div class="card text-center shadow">
+                <div class="col-lg-3 col-md-6 col-sm-8 mt-2">
+                    <div class="card text-center shadow">
 
-                    <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@Html.DisplayFor(modelItem => item.Imagen)" height="250" width="200" alt="">
-                    <div class="card-body">
-                        <h5 class=""> @Html.DisplayFor(modelItem => item.Nombre)</h5>
-                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Precio)</h5>
-                        <p class="card-text"></p>
-                        <a type="submit" name="btnAccion" class="btn btn-outline-dark"><i class="fas fa-shopping-basket"></i>Agregar</a>
+                        <img class="card-img-top" title="Titulo producto" alt="Titulo" src="@Html.DisplayFor(modelItem => item.Imagen)" height="250" width="200" alt="">
+                        <div class="card-body">
+                            <h5 class=""> @Html.DisplayFor(modelItem => item.Nombre)</h5>
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Precio)</h5>
+                            <p class="card-text"></p>
+                            <a type="submit" name="btnAccion" class="btn btn-outline-dark"><i class="fas fa-shopping-basket"></i>Agregar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
 
-    </div>
-       -->
+        </div>
+           -->
 
 
     </div>

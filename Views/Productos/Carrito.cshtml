@@ -1,0 +1,9 @@
+﻿ViewBag.carro
+@for (int i = 0; i < ViewBag.cuenta;i++)
+{
+
+    <li>@ViewBag.carro[i].Producto.Nombre Cantida:@ViewBag.carro[i].Cantidad </li>
+}
+
+@ViewBag.carro[0].Producto.Nombre
+@ViewBag.carro[0].Cantidad 

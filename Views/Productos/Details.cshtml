@@ -22,13 +22,15 @@
                 <h5><span class="text-secondary">En stock:</span> @Html.DisplayFor(model => model.Disponibilidad)</h5>
                 <hr />
                 <h5>Cantidad</h5>
-                <form action="/Productos/pago/" method="post" class="ml-auto mr-auto mt-4">
-                    <input type="number" name="Cantidad" />
-                    <input id="export-btn" type="submit" value="Comprar" class="btn btn-outline-success mt-4" />
-
+                <form action="/Productos/Carrito" method="post">
+                    <input type="hidden" value="@Html.DisplayFor(model => model.IdProductos)" name="IdProductos"/>
+                    <input type="number" name="Cantidad"/>
+                    <input type="submit" value=" sasda"/>
                 </form>
+
                 <hr />
 
+                
                 <a asp-controller="Productos" asp-action="pago" class="btn btn-outline-success mt-4"><i class="fas fa-shopping-cart"></i>Mi Carrito</a>
                 
             </div>

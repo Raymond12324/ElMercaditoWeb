@@ -10,17 +10,35 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Newtonsoft.Json;
 using System.Globalization;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
+
 
 namespace ElMercaditoWeb.Controllers
 {
     public class ProductosController : Controller
     {
+        SupermercadoContext ctx = new SupermercadoContext();
+
         private readonly SupermercadoContext _context;
      
 
         public ProductosController(SupermercadoContext context)
         {
             _context = context;
+        }
+
+        public ActionResult AddCart (int IdProductos)
+        {
+            var cart = new List<ItemCart>();
+            var product = ctx.Productos.Find(IdProductos);
+            cart.Add(new ItemCart() {
+                ProductoCart = product,
+                Cantidad = 1
+            });
+
+            
+            return View();
         }
 
         public  IActionResult pago(int Cantidad)
@@ -40,6 +58,44 @@ namespace ElMercaditoWeb.Controllers
             var supermercadoContext = _context.Productos.Include(p => p.IdCategoriaNavigation);
             return View(await supermercadoContext.ToListAsync());
         }
+
+        public IActionResult Carrito(int IdProductos,int Cantidad)
+        {
+            var cart = new List<CarritoItems>();
+
+            var product = ctx.Productos.Find(IdProductos);
+
+            cart.Add(new CarritoItems()
+            {
+                Producto = product,
+                Cantidad = Cantidad
+
+            });
+            ViewBag.carro = (List<CarritoItems>)cart;
+            ViewBag.cuenta = cart.Count;
+            //for(int i = 0; i < cart.Count; i++)
+            //{
+
+            //}
+            // ViewBag.deedf = cart[0].Cantidad;
+            // ViewBag.deedf = cart[0].Producto.Nombre;
+
+
+           HttpContext.Session.SetString("Nombre", cart[0].Producto.Nombre);
+           HttpContext.Session.SetInt32("Cantidad", cart[0].Cantidad);
+
+            //HttpContext.Session.SetInt32("Cantidad", cart[0].Cantidad);
+
+
+            //var list = (List<int>)ISession["test"];
+            // Sess["Palabra"] = cart;
+
+
+            return RedirectToAction("Create", "Clientes");
+
+
+        }
+
 
         public IActionResult GetTodos()
         {

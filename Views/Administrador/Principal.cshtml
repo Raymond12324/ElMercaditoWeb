@@ -1,5 +1,6 @@
 ﻿<br/>
 <div class="container">
+    @ViewBag.sessionN
     <h3 class="text-center mb-3">Menu de administracion</h3>
     <div class="row">
 
@@ -27,7 +28,7 @@
 
         <div class="card col-lg-4 col-sm-12 mt-auto">
             <div class="card-body text-center">
-                <a asp-controller="Administrador" asp-action="MapaPedidos"> <img src="https://image.flaticon.com/icons/svg/2893/2893216.svg" height="75" alt="" class=""></a>
+                <a asp-controller="Clientes" asp-action="mostrarMapa"> <img src="https://image.flaticon.com/icons/svg/2893/2893216.svg" height="75" alt="" class=""></a>
                 <h6 class="card-subtitle mb-2 mt-2"><b>Mapa de pedidos</b></h6>
             </div>
         </div>
@@ -47,7 +48,7 @@
         </div>
         <div class="card col-lg-4 col-sm-12 mt-auto">
             <div class="card-body text-center">
-                <a asp-controller="Productos" asp-action="Index"> <img src="https://image.flaticon.com/icons/svg/2898/2898328.svg" height="75" alt="" class=""></a>
+                <a asp-controller="Clientes" asp-action="Index"> <img src="https://image.flaticon.com/icons/svg/2898/2898328.svg" height="75" alt="" class=""></a>
                 <h6 class="card-subtitle mb-2 mt-2"><b>Pedidos por usuario</b></h6>
             </div>
         </div>

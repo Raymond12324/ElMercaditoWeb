@@ -10,7 +10,7 @@ namespace ElMercaditoWeb.Models
         {
             Productos = new HashSet<Productos>();
         }
-
+         [Key]
         public int IdCategoria { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]
         public string Nombre { get; set; }

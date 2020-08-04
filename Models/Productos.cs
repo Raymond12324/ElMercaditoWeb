@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,6 +7,7 @@ namespace ElMercaditoWeb.Models
 {
     public partial class Productos
     {
+        [Key]
         public int IdProductos { get; set; }
         public int IdCategoria { get; set; }
         [Required(ErrorMessage = "Este campo es obligatorio")]

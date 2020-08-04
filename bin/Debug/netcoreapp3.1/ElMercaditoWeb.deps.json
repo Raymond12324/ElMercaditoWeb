@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "ElMercaditoWeb/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNet.SessionState.SessionStateModule": "1.1.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.4",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
           "Microsoft.AspNetCore.Identity.UI": "3.1.4",
@@ -292,6 +293,17 @@
         },
         "compile": {
           "ElMercaditoWeb.dll": {}
+        }
+      },
+      "Microsoft.AspNet.SessionState.SessionStateModule/1.1.0": {
+        "runtime": {
+          "lib/Net462/Microsoft.AspNet.SessionState.SessionStateModule.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.20502.0"
+          }
+        },
+        "compile": {
+          "lib/Net462/Microsoft.AspNet.SessionState.SessionStateModule.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.4": {
@@ -4023,6 +4035,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNet.SessionState.SessionStateModule/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TXIqFc9ZUsS2r8WytxMSfHZfL6oYGaX0JqKEiXPTKLGI1x7za6W70VeosPqk7DsEGwjVnkT+ZMjJK3Up6Q5NJw==",
+      "path": "microsoft.aspnet.sessionstate.sessionstatemodule/1.1.0",
+      "hashPath": "microsoft.aspnet.sessionstate.sessionstatemodule.1.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.4": {
       "type": "package",

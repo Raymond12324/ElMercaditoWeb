@@ -214,6 +214,15 @@ C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\pago.cshtml.g.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\bin\Debug\netcoreapp3.1\web.config
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\bin\Debug\netcoreapp3.1\PayPal.dll
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SessionState.SessionStateModule.dll
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\ElMercaditoWeb.csproj.CoreCompileInputs.cache
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\ElMercaditoWeb.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\ElMercaditoWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\AddCart.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Productos\Carrito.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Clientes\Create.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Clientes\Delete.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Clientes\Details.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Clientes\Edit.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Clientes\Index.cshtml.g.cs
+C:\Users\raymond\source\repos\ElMercaditoWeb\ElMercaditoWeb\obj\Debug\netcoreapp3.1\Razor\Views\Clientes\Mapa.cshtml.g.cs

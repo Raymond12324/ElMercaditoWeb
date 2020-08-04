@@ -1,0 +1,86 @@
+﻿@model ElMercaditoWeb.Models.Clientes
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container">
+    <h3>Rellene el formulario para completar la orden</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="OrdenId" class="control-label"></label>
+                    <input asp-for="OrdenId" class="form-control" />
+                    <span asp-validation-for="OrdenId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    
+                    <input asp-for="Usuario" value="@User.Identity.Name" class="form-control" type="hidden"  />
+                    <span asp-validation-for="Usuario" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  
+                    <input asp-for="Productonombre" value="@ViewBag.sessionN" class="form-control" type="hidden" />
+                    <span asp-validation-for="Productonombre" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                   
+                    <input asp-for="Productocantidad" value="@ViewBag.sessionC" class="form-control" type="hidden"/>
+                    <span asp-validation-for="Productocantidad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="NombrePersona" class="control-label"></label>
+                    <input asp-for="NombrePersona" class="form-control" />
+                    <span asp-validation-for="NombrePersona" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FechaCumpleanos" class="control-label"></label>
+                    <input asp-for="FechaCumpleanos" class="form-control" />
+                    <span asp-validation-for="FechaCumpleanos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telefono" class="control-label"></label>
+                    <input asp-for="Telefono" class="form-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Direccion" class="control-label"></label>
+                    <input asp-for="Direccion" class="form-control" />
+                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Lat" class="control-label"></label>
+                    <input asp-for="Lat" class="form-control" />
+                    <span asp-validation-for="Lat" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Long" class="control-label"></label>
+                    <input asp-for="Long" class="form-control" />
+                    <span asp-validation-for="Long" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    
+                    <input asp-for="Estado" class="form-control" value="En espera" type="hidden"/>
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

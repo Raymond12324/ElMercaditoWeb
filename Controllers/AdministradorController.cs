@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using ElMercaditoWeb.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace ElMercaditoWeb.Controllers
 {
@@ -29,6 +30,7 @@ namespace ElMercaditoWeb.Controllers
         [HttpGet]
         public IActionResult ListUser()
         {
+     
             var user = userManager.Users;
             return View(user);
         }
@@ -36,6 +38,8 @@ namespace ElMercaditoWeb.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Principal ()
         {
+            ViewBag.sessionN = HttpContext.Session.GetString("Nombre");
+            ViewBag.sessionN2 = HttpContext.Session.GetString("Nombre");
             return View();
         }
 

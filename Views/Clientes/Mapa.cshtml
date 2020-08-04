@@ -1,0 +1,60 @@
+﻿<br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea8</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+</head>
+<body>
+    <button id="buscar">Ver Ubicaciones</button>
+
+    <div class="container">
+        <div id="map" style="height:600px" class="border border-warning"></div>
+    </div>
+
+
+    <script>
+        var map = L.map('map').fitWorld();
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var boton = document.querySelector('#buscar');
+
+        boton.addEventListener('click', async function () {
+
+
+
+            var url = "https://localhost:44314/Clientes/mapas";
+
+            var resp = await fetch(url);
+            var data = await resp.json();
+            var latlong = [data[0].lat, data[0].long];
+            console.log(data.length)
+            for (var i = 0; i < 2; i++) {
+                map.flyTo(latlong, 14);
+                L.marker([data[i].lat, data[i].long]).addTo(map).bindPopup(`Su nombre es ${data[i].nombrePersona} Su usuario es ${data[i].usuario} Su direccion es ${data[i].direccion} Su telefono ${data[i].telefono}`)
+                    .openPopup();
+            }
+
+            map.addEventListener('click', function (e) {
+                console.log(e);
+            })
+
+        });
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

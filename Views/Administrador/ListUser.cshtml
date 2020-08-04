@@ -1,43 +1,44 @@
 ﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
-<br/>
-  <div class="container">
-        @if (Model.Any())
+<br />
+
+<div class="container">
+    @if (Model.Any())
 
 
-        {
+    {
 
 
-            <h1>Lista de usuarios registrados en el sistema</h1>
+        <h1>Lista de usuarios registrados en el sistema</h1>
 
-            <table class="table">
-                <thead>
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th scope="col">Mail</th>
+                    <th scope="col">Id</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    var i = 0;
+
                     <tr>
-                        
-                        <th scope="col">Mail</th>
-                        <th scope="col">Id</th>
+
+                        <td>@user.Email</td>
+                        <td>@user.Id</td>
                     </tr>
-                </thead>
-
-                <tbody>
-                    @foreach (var user in Model)
-                    {
-                        var i = 0;
-                        
-                        <tr>
-                          
-                            <td>@user.Email</td>
-                            <td>@user.Id</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                }
+            </tbody>
+        </table>
 
 
-        }
-        else
-        {
+    }
+    else
+    {
 
-            <h1 class="text-center">No se encuentra ningun usuario registrado en el sistema</h1>
+        <h1 class="text-center">No se encuentra ningun usuario registrado en el sistema</h1>
 
-        }
-  </div>
+    }
+</div>

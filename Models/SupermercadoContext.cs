@@ -25,6 +25,7 @@ namespace ElMercaditoWeb.Models
         public virtual DbSet<Categoria> Categoria { get; set; }
         public virtual DbSet<Productos> Productos { get; set; }
         public virtual DbSet<Slider> Slider { get; set; }
+        public virtual DbSet<Clientes> Clientes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -221,6 +222,55 @@ namespace ElMercaditoWeb.Models
                 entity.Property(e => e.Img3)
                     .HasColumnName("img3")
                     .HasMaxLength(500)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Clientes>(entity =>
+            {
+                entity.HasKey(e => e.OrdenId)
+                    .HasName("PK__Clientes__C088A504D164F8E2");
+
+                entity.Property(e => e.OrdenId).ValueGeneratedNever();
+
+                entity.Property(e => e.Direccion)
+                    .HasColumnName("direccion")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Estado)
+                    .HasColumnName("estado")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FechaCumpleanos)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Lat).HasColumnType("decimal(10, 6)");
+
+                entity.Property(e => e.Long)
+                    .HasColumnName("long")
+                    .HasColumnType("decimal(10, 6)");
+
+                entity.Property(e => e.NombrePersona)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Productocantidad)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Productonombre)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Telefono)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Usuario)
+                    .HasColumnName("usuario")
+                    .HasMaxLength(255)
                     .IsUnicode(false);
             });
 

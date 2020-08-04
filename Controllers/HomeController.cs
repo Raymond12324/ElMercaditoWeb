@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ElMercaditoWeb.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace ElMercaditoWeb.Controllers
 {
@@ -23,6 +24,8 @@ namespace ElMercaditoWeb.Controllers
 
         public IActionResult Index()
         {
+            HttpContext.Session.SetString("Test", "Session Value");
+
             var todo = _context.Slider.FromSqlRaw("Select * from slider").ToList();
             ViewBag.numeroDatos = todo.Count();
             ViewBag.datos = todo;
@@ -32,6 +35,7 @@ namespace ElMercaditoWeb.Controllers
 
         public IActionResult Privacy()
         {
+            ViewBag.sessionv = HttpContext.Session.GetString("Test");
             return View();
         }
 

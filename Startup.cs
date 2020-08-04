@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ElMercaditoWeb.Models;
+using Microsoft.AspNetCore.Session;
 
 namespace ElMercaditoWeb
 {
@@ -40,6 +41,8 @@ namespace ElMercaditoWeb
 
             });
 
+
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -53,10 +56,18 @@ namespace ElMercaditoWeb
                options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")));
 
-          
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(3600);
+            });
+
+
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddMvc();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         private async Task CreateRoles(IServiceProvider serviceProvider)
@@ -100,10 +111,10 @@ namespace ElMercaditoWeb
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

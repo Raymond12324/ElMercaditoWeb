@@ -28,19 +28,20 @@
                         @for (var i = 0; i < ViewBag.numeroDatos; i++)
                         {
                             var total = (ViewBag.datos[i].Precio * ViewBag.Cantidad);
-                        <tr>
-                            <th scope="row">@i</th>
-                            <td>@ViewBag.datos[i].Nombre</td>
-                            <td>@ViewBag.Cantidad</td>
-                            <td>@ViewBag.datos[i].Precio</td>
-                            @{ var total_todo = (total * ViewBag.numeroDatos); }
-                            <td>Total : @total</td>
-                        </tr>
+                            <tr>
+                                <th scope="row">@i</th>
+                                <td>@ViewBag.datos[i].Nombre</td>
+                                <td>@ViewBag.Cantidad</td>
+                                <td>@ViewBag.datos[i].Precio</td>
+                                @{ var total_todo = (total * ViewBag.numeroDatos); }
+                                <td>Total : @total</td>
+                            </tr>
                             <input value="@total_todo" id="total" type="hidden" />
                         }
 
                     </tbody>
-
+                    @ViewBag.sessionN
+                    @ViewBag.sessionC
                 </table>
                 <div id="total_show"></div>
 
