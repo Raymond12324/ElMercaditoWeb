@@ -20526,6 +20526,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Clientes\\Edit.cshtml",
+      "TargetPath": "Views\\Clientes\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Administrador\\EditRole.cshtml",
       "TargetPath": "Views\\Administrador\\EditRole.cshtml",
       "FileKind": "mvc"
@@ -20591,13 +20596,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Productos\\AddCart.cshtml",
+      "TargetPath": "Views\\Productos\\AddCart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Productos\\Carrito.cshtml",
+      "TargetPath": "Views\\Productos\\Carrito.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Clientes\\Delete.cshtml",
+      "TargetPath": "Views\\Clientes\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Clientes\\Details.cshtml",
+      "TargetPath": "Views\\Clientes\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20656,6 +20681,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Clientes\\Index.cshtml",
+      "TargetPath": "Views\\Clientes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -20668,6 +20698,11 @@
     {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Administrador\\MapaPedidos.cshtml",
       "TargetPath": "Views\\Administrador\\MapaPedidos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Clientes\\Mapa.cshtml",
+      "TargetPath": "Views\\Clientes\\Mapa.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20743,6 +20778,11 @@
     {
       "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Administrador\\ListUser.cshtml",
       "TargetPath": "Views\\Administrador\\ListUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\raymond\\source\\repos\\ElMercaditoWeb\\ElMercaditoWeb\\Views\\Clientes\\Create.cshtml",
+      "TargetPath": "Views\\Clientes\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
