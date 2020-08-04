@@ -38,8 +38,7 @@ namespace ElMercaditoWeb.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Principal ()
         {
-            ViewBag.sessionN = HttpContext.Session.GetString("Nombre");
-            ViewBag.sessionN2 = HttpContext.Session.GetString("Nombre");
+           
             return View();
         }
 

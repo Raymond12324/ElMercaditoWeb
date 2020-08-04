@@ -3,87 +3,135 @@
 @{
     ViewData["Title"] = "Index";
 }
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Usuario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Productonombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Productocantidad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NombrePersona)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaCumpleanos)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefono)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Direccion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lat)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Long)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usuario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Productonombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Productocantidad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NombrePersona)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaCumpleanos)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Direccion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Long)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.OrdenId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.OrdenId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.OrdenId">Delete</a>
-            </td>
-        </tr>
+
+@if ((await AuthorizationService.AuthorizeAsync(User, "Admin")).Succeeded)
+{
+    <table class="table">
+    
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Productonombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Productocantidad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombrePersona)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaCumpleanos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Direccion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Lat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Long)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.OrdenId">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.OrdenId">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.OrdenId">Borrar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 }
-    </tbody>
-</table>
+
+@if (SignInManager.IsSignedIn(User))
+{
+<div class="container">
+    <h1 class="display-4 text-center">Gracias por su compra</h1>
+    <a asp-controller="Productos" asp-action="pago" class="nav-link active font-weight-bold btn-lg text-center"><i class="fas fa-shopping-cart"></i></a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Usuario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Productonombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Productocantidad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NombrePersona)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Productonombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Productocantidad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NombrePersona)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+}
+

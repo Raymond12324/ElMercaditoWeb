@@ -25,23 +25,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @for (var i = 0; i < ViewBag.numeroDatos; i++)
-                        {
-                            var total = (ViewBag.datos[i].Precio * ViewBag.Cantidad);
-                            <tr>
-                                <th scope="row">@i</th>
-                                <td>@ViewBag.datos[i].Nombre</td>
-                                <td>@ViewBag.Cantidad</td>
-                                <td>@ViewBag.datos[i].Precio</td>
-                                @{ var total_todo = (total * ViewBag.numeroDatos); }
-                                <td>Total : @total</td>
-                            </tr>
-                            <input value="@total_todo" id="total" type="hidden" />
-                        }
+                    <th scope="row"></th>
+                    <td>@ViewBag.sessionN</td>
+                    <td>@ViewBag.sessionN2</td>
+                    <td>@ViewBag.sessionN1</td>
+                    @{var total = (@ViewBag.sessionN2 * @ViewBag.sessionN1);}
+                    <td>Total :@total </td>
+                    </tr>
+                   
+                    <input value="@total" id="total" type="hidden" />
 
-                    </tbody>
-                    @ViewBag.sessionN
-                    @ViewBag.sessionC
                 </table>
                 <div id="total_show"></div>
 
@@ -63,9 +56,9 @@
                             // Set up the transaction
                             createOrder: function (data, actions) {
                                 return actions.order.create({
-                                    purchase_units:[{
-                                        amount: {
-                                            value: @ViewBag.datos[2].Precio,
+                                purchase_units:[{
+                                    amount: {
+                                        value: @total,
                                             currency: 'DOP'
 
 
@@ -96,7 +89,7 @@
                 </script>
                 <p id="botonP"></p>
                 <p class="card-text">Pago via paypal su producto se estara entregando pronto</p>
-                <a href="#" class="btn btn-outline-success">Realizar pago <i class="far fa-money-bill-alt"></i></a>
+                
 
             </div>
             <div class="card-footer text-muted">

@@ -3,9 +3,6 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-@{
-    ViewData["Title"] = "Create";
-}
 
 
 <div class="container">
@@ -71,14 +68,14 @@
                     <span asp-validation-for="Estado" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <input type="submit" value="Enviar" class="btn btn-primary" />
                 </div>
             </form>
         </div>
     </div>
 
     <div>
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">Volver atras</a>
     </div>
 </div>
 @section Scripts {

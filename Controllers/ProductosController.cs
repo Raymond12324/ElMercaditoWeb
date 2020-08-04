@@ -47,7 +47,10 @@ namespace ElMercaditoWeb.Controllers
             ViewBag.numeroDatos = todo.Count();
             ViewBag.datos = todo;
             ViewBag.Cantidad = Cantidad;
-         
+            ViewBag.sessionN = HttpContext.Session.GetString("Nombre");
+            ViewBag.sessionN1 = HttpContext.Session.GetInt32("Precio");
+            ViewBag.sessionN2 = HttpContext.Session.GetInt32("Cantidad");
+
             return View();
         }
 
@@ -82,6 +85,7 @@ namespace ElMercaditoWeb.Controllers
 
 
            HttpContext.Session.SetString("Nombre", cart[0].Producto.Nombre);
+           HttpContext.Session.SetInt32("Precio", Convert.ToInt32(cart[0].Producto.Precio));
            HttpContext.Session.SetInt32("Cantidad", cart[0].Cantidad);
 
             //HttpContext.Session.SetInt32("Cantidad", cart[0].Cantidad);
