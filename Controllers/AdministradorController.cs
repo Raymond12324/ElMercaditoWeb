@@ -101,7 +101,7 @@ namespace ElMercaditoWeb.Controllers
 
             if (role == null)
             {
-                ViewBag.ErrorMessage = $"Role with Id = {id} cannot be found";
+                ViewBag.ErrorMessage = $"No existe ese rol= {id}";
                 return View("NotFound");
             }
 
@@ -134,7 +134,7 @@ namespace ElMercaditoWeb.Controllers
 
             if (role == null)
             {
-                ViewBag.ErrorMessage = $"Role with Id = {model.Id} cannot be found";
+                ViewBag.ErrorMessage = $"No se puede encontrar = {model.Id} ";
                 return View("NotFound");
             }
             else

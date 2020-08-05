@@ -2,6 +2,11 @@
 @{
     ViewData["Title"] = "Inicio";
 }
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
 
 
 
@@ -18,11 +23,13 @@
 
             <img src="@ViewBag.datos[0].Img1" class="d-block w-100 blur" height="750" alt="...">
             <div class="carousel-caption align-middle mt-4">
-                <h1 class="display-2  text-center centrado text-light">El meercadito</h1>
+                <h1 class="display-2  text-center centrado text-light">El mercadito</h1>
                 <h1 class="display-5 text-center text-light">Los  mejores productos del mercado</h1>
                 <br>
-                <a class="btn btn-warning btn-lg text-light" href="http://albany0911-001-site1.etempurl.com/Identity/Account/Login">Registrate</a>
-                
+                @if (SignInManager.IsSignedIn(User) == false)
+                {
+            <a class="btn btn-warning btn-lg text-light" href="http://albany0911-001-site1.etempurl.com/Identity/Account/Login">Inicia session</a>
+                }
                 <br>
 
                 <br>
@@ -45,8 +52,11 @@
                 <h1 class="display-2  text-center centrado text-light">El mercadito</h1>
                 <h1 class="display-5 text-center text-light">Los  mejores productos del mercado</h1>
                 <br>
-                <a class="btn btn-warning btn-lg text-light" href="http://albany0911-001-site1.etempurl.com/Identity/Account/Login">Registrate</a>
-        
+                @if (SignInManager.IsSignedIn(User) == false)
+                {
+                    <a class="btn btn-warning btn-lg text-light" href="http://albany0911-001-site1.etempurl.com/Identity/Account/Login">Inicia session</a>
+                }
+
                 <br>
                 <br>
                 <br>
@@ -67,8 +77,11 @@
                 <h1 class="display-2  text-center centrado text-light">El mercadito</h1>
                 <h1 class="display-5 text-center text-light">Los  mejores productos del mercado</h1>
                 <br>
-                <a class="btn btn-warning btn-lg text-light" href="http://albany0911-001-site1.etempurl.com/Identity/Account/Login">Registrate</a>
-               
+                @if (SignInManager.IsSignedIn(User) == false)
+                {
+                    <a class="btn btn-warning btn-lg text-light" href="http://albany0911-001-site1.etempurl.com/Identity/Account/Login">Inicia session</a>
+                }
+
                 <br>
                 <br>
                 <br>
@@ -109,7 +122,7 @@
                 <h6 class="card-subtitle mb-2 mt-2"><b>Productos</b></h6>
                 <p class="card-text">Nuestros productos son de la mejor calidad cultivados con amor traidos desde los mejores lugares para cosechar solo para ti y te puedes acceder a ellos con solo dar varios click y estos llegan a la puerta de tu casa </p>
 
-             
+
             </div>
         </div>
 
@@ -129,7 +142,7 @@
                 <h6 class="card-subtitle mb-2 mt-2"><b>Nosotros</b></h6>
                 <p class="card-text">Nosotros somos una empresa que opera en linea y que hace posible que las personas puedan comprar sus productos del dia a dia con solo entrar a nuestra pagina y hacer varios clicks</p>
 
-         
+
             </div>
         </div>
     </div>
